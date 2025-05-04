@@ -13,7 +13,9 @@ const Contact = () => {
     fullName: "",
     lastName: "",
     email: "",
+    country:"",
     phoneNumber: "",
+    jobTitle: "",
     message: "",
   });
 
@@ -39,7 +41,9 @@ const Contact = () => {
       fullName: "",
       lastName: "",
       email: "",
+      country:"",
       phoneNumber: "",
+      jobTitle: "",
       message: "",
     });
   };
@@ -101,6 +105,15 @@ const Contact = () => {
               onChange={handleChange}
               required
             />
+             <input
+              type="text"
+              placeholder="Country"
+              name="country"
+              className="control"
+              value={formData.country}
+              onChange={handleChange}
+              required
+            />
             <input
               type="tel"
               placeholder="Phone Number"
@@ -109,8 +122,17 @@ const Contact = () => {
               value={formData.phoneNumber}
               onChange={handleChange}
             />
+            <input
+              type="text"
+              placeholder="Job Title"
+              name="jobTitle"
+              className="control"
+              value={formData.jobTitle}
+              onChange={handleChange}
+              required
+            />
             <textarea
-              placeholder="Message"
+              placeholder="Description"
               name="message"
               className="control"
               value={formData.message}
